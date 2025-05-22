@@ -41,4 +41,28 @@ function checkAnswers() {
   let total = 0;
   questions.forEach((q, idx) => {
     q.answers.forEach((ans, i) => {
-      const field = document.getElementById(`q${idx}_${i
+      const field = document.getElementById(`q${idx}_${i}`);
+      const userInput = field.value.trim().toLowerCase();
+      if (userInput === ans.toLowerCase()) {
+        field.style.borderColor = "#2a8b2a";
+        correct++;
+      } else {
+        field.style.borderColor = "#c9302c";
+      }
+      total++;
+    });
+  });
+  const feedback = document.getElementById("feedback");
+  if (correct === total) {
+    feedback.innerHTML = "<span style='color: green; font-weight: bold;'>Bravo! Ottimo lavoro!</span>";
+  } else {
+    feedback.innerHTML = `<span style='color: #a03c3f; font-weight: bold;'>Je hebt ${correct} van de ${total} goed. Probeer het nog eens.</span>`;
+  }
+}
+
+function resetExercise() {
+  createExercise();
+  document.getElementById("feedback").innerHTML = "";
+}
+
+createExercise();
