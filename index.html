@@ -1,93 +1,27 @@
-<div lang="it" style="font-family: 'Poppins', sans-serif; max-width: 860px; margin: 2rem auto; background: #fdfaf6; padding: 2.4rem; border-radius: 22px; box-shadow: 0 4px 18px rgba(0,0,0,0.06); font-size: 1.56rem; line-height: 2; color: #3e3a36;">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Oefening – Imperfetto of Passato Prossimo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📝 Oefeningen – Imperfetto of Passato Prossimo</h2>
+    <p><strong>Vul in:</strong> Kies het juiste hulpwerkwoord en voltooid deelwoord of imperfetto-vorm.</p>
+    <div id="exercise-container"></div>
 
-  <h2 style="font-family: 'Lora', serif; color: #8E2B2F; font-size: 2.4rem; margin-bottom: 1rem;">📝 Oefeningen – Imperfetto of Passato Prossimo</h2>
-  <p><strong>Vul in:</strong> Kies het juiste hulpwerkwoord en voltooid deelwoord of imperfetto-vorm.</p>
+    <div class="button-container">
+      <button class="check" onclick="checkAnswers()">Controleer alles</button>
+      <button class="reset" onclick="resetExercise()">Opnieuw proberen</button>
+    </div>
 
-  <div id="exercise-container" style="margin-top: 1.6rem;"></div>
+    <div id="feedback"></div>
 
-  <div style="margin-top: 2rem;">
-    <button onclick="checkAnswers()" style="padding: 0.8rem 1.6rem; background-color: #8E2B2F; color: #fff; border: none; border-radius: 10px; font-size: 1.2rem; font-weight: bold; font-family: 'Poppins', sans-serif; cursor: pointer;">
-      Controleer alles
-    </button>
-    <button onclick="resetExercise()" style="margin-left: 1rem; padding: 0.8rem 1.6rem; background-color: #e0dad3; color: #3e3a36; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: bold; font-family: 'Poppins', sans-serif; cursor: pointer;">
-      Opnieuw proberen
-    </button>
+    <footer>π Italian Club – La lingua con gusto</footer>
   </div>
 
-  <div id="feedback" style="margin-top: 1.6rem;"></div>
-
-  <script>
-    const questions = [
-      {
-        text: '1. Ieri sera, mentre ___ (guardare) la TV, ___ (sentire) un rumore strano.',
-        answers: ['guardavo', 'ho sentito']
-      },
-      {
-        text: '2. Quando ero piccolo, ___ (andare) spesso al parco con mio nonno.',
-        answers: ['andavo']
-      },
-      {
-        text: '3. L\'anno scorso, noi ___ (visitare) Roma per la prima volta.',
-        answers: ['abbiamo visitato']
-      },
-      {
-        text: '4. Mentre Maria ___ (preparare) la cena, suo marito ___ (arrivare) a casa.',
-        answers: ['preparava', 'è arrivato']
-      },
-      {
-        text: '5. Ogni estate, la mia famiglia ___ (passare) le vacanze al mare.',
-        answers: ['passava']
-      }
-    ];
-
-    function createExercise() {
-      const container = document.getElementById("exercise-container");
-      container.innerHTML = '';
-      questions.forEach((q, idx) => {
-        const block = document.createElement("div");
-        block.style.marginBottom = "2.4rem";
-        let html = `<label style="display: block; margin-bottom: 0.6rem;">${q.text}</label>`;
-        q.answers.forEach((_, i) => {
-          html += `<input type="text" id="q${idx}_${i}" style="padding: 0.6rem; font-size: 1.5rem; margin: 0.4rem 0; display: block; width: 100%; max-width: 500px; background: #fff7ed; border: 1px solid #ccc; border-radius: 8px;">`;
-        });
-        block.innerHTML = html;
-        container.appendChild(block);
-      });
-    }
-
-    function checkAnswers() {
-      let correct = 0;
-      let total = 0;
-      questions.forEach((q, idx) => {
-        q.answers.forEach((ans, i) => {
-          const field = document.getElementById(`q${idx}_${i}`);
-          const userInput = field.value.trim().toLowerCase();
-          if (userInput === ans.toLowerCase()) {
-            field.style.borderColor = "#2a8b2a";
-            correct++;
-          } else {
-            field.style.borderColor = "#c9302c";
-          }
-          total++;
-        });
-      });
-      const feedback = document.getElementById("feedback");
-      if (correct === total) {
-        feedback.innerHTML = "<span style='color: green; font-weight: bold;'>Bravo! Ottimo lavoro!</span>";
-      } else {
-        feedback.innerHTML = `<span style='color: #a03c3f; font-weight: bold;'>Je hebt ${correct} van de ${total} goed. Probeer het nog eens.</span>`;
-      }
-    }
-
-    function resetExercise() {
-      createExercise();
-      document.getElementById("feedback").innerHTML = "";
-    }
-
-    createExercise();
-  </script>
-
-  <footer style="margin-top: 3rem; font-size: 1.15rem; text-align: center; font-style: italic; color: #6d625c;">
-    π Italian Club – La lingua con gusto
-  </footer>
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
