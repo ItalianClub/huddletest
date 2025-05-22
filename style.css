@@ -1,0 +1,79 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fcf9f3;
+  color: #3e3a36;
+  line-height: 1.7;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 860px;
+  background: #fdfaf6;
+  margin: auto;
+  padding: 2.4rem;
+  border-radius: 22px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  color: #8E2B2F;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0.3rem 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff7ed;
+}
+
+.button-container {
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.check {
+  background-color: #8E2B2F;
+  color: #fff;
+}
+
+.reset {
+  background-color: #e0dad3;
+  color: #3e3a36;
+  margin-left: 1rem;
+}
+
+#feedback {
+  margin-top: 2rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  text-align: center;
+  font-style: italic;
+  color: #6d625c;
+}
