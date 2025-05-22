@@ -2,16 +2,16 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #fcf9f3;
   color: #3e3a36;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .container {
   max-width: 860px;
   background: #fdfaf6;
   margin: auto;
-  padding: 2.4rem;
+  padding: 2rem;
   border-radius: 22px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
   font-size: 1.2rem;
@@ -20,14 +20,8 @@ body {
 h2 {
   font-family: 'Lora', serif;
   color: #8E2B2F;
-  font-size: 2rem;
+  font-size: 1.9rem;
   margin-bottom: 1rem;
-}
-
-label {
-  font-weight: 500;
-  display: block;
-  margin-bottom: 0.5rem;
 }
 
 input[type="text"] {
@@ -35,21 +29,21 @@ input[type="text"] {
   font-size: 1.1rem;
   width: 100%;
   max-width: 500px;
-  margin: 0.3rem 0 1rem;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff7ed;
 }
 
 .button-container {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 
 button {
-  padding: 0.8rem 1.6rem;
+  padding: 0.7rem 1.4rem;
   border: none;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
@@ -67,12 +61,12 @@ button {
 }
 
 #feedback {
-  margin-top: 2rem;
+  margin-top: 1.4rem;
 }
 
 footer {
-  margin-top: 3rem;
-  font-size: 1.1rem;
+  margin-top: 2rem;
+  font-size: 1.05rem;
   text-align: center;
   font-style: italic;
   color: #6d625c;
